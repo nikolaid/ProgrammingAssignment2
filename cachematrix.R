@@ -1,5 +1,6 @@
 ## Put comments here that give an overall description of what your
-## functions do
+## functions do: they consequetively set the matrix, get the matrix, set the inverse and get the inverse of it. 
+#This is then imputed to cache Solve
 
 ## Write a short comment describing this function
 
@@ -19,4 +20,12 @@ list(set = set, get = get,setinv = setinv,getinv = getinv)}
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
+         a = x$getinv()
+         if (!is.null(a)){
+         return(a)
+         }
+         b = x$get()
+         a = solve(a, ...)
+         x$setinv(inv)
+         return(inv)
 }
