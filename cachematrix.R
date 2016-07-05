@@ -24,8 +24,8 @@ a = x$getinv()
 if (!is.null(a)){
 return(a)
 }
-b = x$get()
-a = solve(a, ...)
+calc.data = x$get()
+a = solve(calc.data, ...)
 x$setinv(inv)
 return(inv)
 }
