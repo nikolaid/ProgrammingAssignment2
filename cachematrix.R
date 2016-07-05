@@ -26,6 +26,6 @@ return(a)
 }
 calc.data = x$get()
 a = solve(calc.data, ...)
-x$setinv(inv)
-return(inv)
+x$setinv(a)
+return(a)
 }
