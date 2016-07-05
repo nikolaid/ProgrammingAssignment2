@@ -20,12 +20,12 @@ list(set = set, get = get,setinv = setinv,getinv = getinv)}
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
-         a = x$getinv()
-         if (!is.null(a)){
-         return(a)
-         }
-         b = x$get()
-         a = solve(a, ...)
-         x$setinv(inv)
-         return(inv)
+a = x$getinv()
+if (!is.null(a)){
+return(a)
+}
+b = x$get()
+a = solve(a, ...)
+x$setinv(inv)
+return(inv)
 }
